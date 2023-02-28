@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 //        monochrome = true,
         features = "./src/test/resources/features",//features folder path
         glue = "stepdefinitions",   //stepdefinitions path
-        tags = "@bluerentalcar",
+        tags = "@blue_rental_car",
         dryRun = false
 
 )

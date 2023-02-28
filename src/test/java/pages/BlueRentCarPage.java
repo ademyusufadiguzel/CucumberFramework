@@ -5,25 +5,23 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class BlueRentalCarPage {
-
-    public BlueRentalCarPage(){
+public class BlueRentCarPage {
+    public BlueRentCarPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(className = "btn btn-primary btn-sm")
+    @FindBy(xpath = "//a[normalize-space()='Login']//*[name()='svg']")
     public WebElement loginHomePage;
 
-    @FindBy(id = "formBasicEmail")
+    @FindBy(xpath = "//input[@id='formBasicEmail']")
     public WebElement emailBox;
 
-    @FindBy(id = "formBasicPassword")
+    @FindBy(xpath = "//input[@id='formBasicPassword']")
     public WebElement passwordBox;
 
-    @FindBy(xpath = "//button[@type='submit']")
+    @FindBy(xpath = "//button[.=' Login']")
     public WebElement loginLoginPage;
 
     @FindBy(id = "dropdown-basic-button")
     public WebElement profileButton;
-
 }
