@@ -4,8 +4,8 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
-
+import java.util.NoSuchElementException;
 public class Driver {
     //create a driver instance
     private static WebDriver driver;
@@ -38,9 +38,9 @@ public class Driver {
             } else if ("firefox".equals(browser)) {
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
-            } else if ("edge".equals(browser)) {
-                WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
+            } else if ("ie".equals(browser)) {
+                WebDriverManager.iedriver().setup();
+                driver = new InternetExplorerDriver();
             } else if ("safari".equals(browser)) {
                 WebDriverManager.getInstance(SafariDriver.class).setup();
                 driver = new SafariDriver();

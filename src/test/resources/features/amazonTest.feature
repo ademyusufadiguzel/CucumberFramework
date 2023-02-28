@@ -1,3 +1,4 @@
+@gp1
 Feature: Amazon Search
   Scenario: Amazonda Selenium arattik
     Given amazon sayfasina gidilir
