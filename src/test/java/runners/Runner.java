@@ -1,24 +1,18 @@
 package runners;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-@RunWith(Cucumber.class)
-@CucumberOptions(
-//        plugin = {
-//                "pretty",//raporlarin daha okunakli olmasi icin
-//                "html:target/default-cucumber-reports.html",
-//                "json:target/json-reports/cucumber.json",
-//                "junit:target/xml-report/cucumber.xml"
-//        },
-//        monochrome = true,
-        features = "./src/test/resources/features",//features folder path
-        glue = "stepdefinitions",   //stepdefinitions path
-        tags = "@blue_rental_car",
-        dryRun = false
+
+@RunWith(Cucumber.class) // test çalıştırıcı notasyonu
+@CucumberOptions( // Seneryoların nerede ve nasıl çalışacağı, hangi raporun kullanılmasıyla alakalı seçenekleri ayarlar
+        plugin = {"html:src/test/resources/reports/g1g2g3g4.html"},
+        features = "src/test/resources/features",
+        glue = "stepdefinitions",
+        tags = "@g1 or @g2 or @g3 or @g4 ",
+        dryRun = false //Seneryonun adımlarını kontrol eder ve çalıştığını görürüz
 
 )
 public class Runner {
+
 }
-//Bu sinif Test caseleri RUN etmek icin kullanilir
-//Ve konfigurasyonlar icin kullanilir
-//Runner class, features file lar ile step defitions i birbirile baglar
